@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #f0f2f5;
+  color: #333333;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.biodata-container {
+  width: 100%;
+  max-width: 1100px; 
+}
+
+
+.card {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: row; 
+  overflow: hidden;
+  min-height: 600px;
+}
+
+.foto-section {
+  width: 35%;
+  background: linear-gradient(135deg, #828198, #a3acbc);
+  color: #ffffff;
+  padding: 50px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.foto-label {
+  font-size: 0.8rem;
+  letter-spacing: 3px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  opacity: 0.9;
+}
+
+.foto-wrapper {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  border: 5px solid rgba(255, 255, 255, 0.85);
+  overflow: hidden;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.foto-caption {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.foto-subcaption {
+  font-size: 0.9rem;
+  opacity: 0.85;
+  margin-top: 6px;
+}
+
+.info-section {
+  width: 65%;
+  padding: 50px 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sapaan {
+  color: #8d8ca3;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+}
+
+.nama-utama {
+  font-size: 2.2rem;
+  color: #111827;
+  margin-top: 4px;
+}
+
+.judul {
+  color: #6b7280;
+  font-size: 1rem;
+  margin-top: 2px;
+}
+
+.garis {
+  height: 4px;
+  width: 60px;
+  background-color: #63627b;
+  margin: 20px 0 25px 0;
+  border-radius: 2px;
+}
+
+h2 {
+  font-size: 1.2rem;
+  color: #1f2937;
+  margin-bottom: 10px;
+}
+
+.deskripsi {
+  color: #4b5563;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  margin-bottom: 25px;
+}
+
+/* Biodata List Grid */
+.biodata-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background-color: #f9fafb;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #f3f4f6;
+  margin-bottom: 25px;
+}
+
+.biodata-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 8px;
+}
+
+.biodata-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.biodata-item b {
+  color: #374151;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  width: 120px;
+}
+
+.biodata-item span {
+  color: #4b5563;
+  font-size: 0.95rem;
+  text-align: right;
+  flex: 1;
+}
+
+/* Moment Section */
+.moment-title {
+  margin-top: 10px;
+}
+
+.moment-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.moment-box {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.moment-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+.moment-box img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+
+.moment-text {
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.moment-number {
+  font-weight: 800;
+  color: #818097;
+  font-size: 1rem;
+}
+
+.moment-text p {
+  font-size: 0.8rem;
+  color: #374151;
+  font-weight: 500;
+}
+
+.penutup {
+  margin-top: 30px;
+  text-align: center;
+  font-style: italic;
+  color: #9ca3af;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 850px) {
+  .card {
+    flex-direction: column;
+  }
+
+  .foto-section, 
+  .info-section {
+    width: 100%;
+  }
+
+  .info-section {
+    padding: 35px 25px;
+  }
+
+  .moment-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .biodata-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+  }
+
+  .biodata-item span {
+    text-align: left;
+  }
+}
